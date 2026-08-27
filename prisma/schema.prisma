@@ -1,0 +1,206 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  TEACHER
+  STUDENT
+  PARENT
+}
+
+enum SessionStatus {
+  SCHEDULED
+  ACTIVE
+  CLOSED
+}
+
+enum AttendanceStatus {
+  PRESENT
+  LATE
+  LEAVE
+  ABSENT
+}
+
+enum CheckinMethod {
+  QR
+  GPS
+  MANUAL
+  PIN
+  GATE
+}
+
+enum LeaveType {
+  SICK
+  BUSINESS
+  ACTIVITY
+}
+
+enum ReviewStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model User {
+  id             String         @id @default(cuid())
+  code           String?        @unique
+  name           String
+  email          String         @unique
+  role           String         @default("STUDENT") // ADMIN, TEACHER, STUDENT, PARENT
+  phone          String?
+  avatarUrl      String?
+  advisorRoom    String?        // e.g. "ม.4/1" (สำหรับอาจารย์ที่ปรึกษา)
+  studentRoom    String?        // e.g. "ม.4/1" (สำหรับนักเรียน)
+  streakDays     Int            @default(0)
+  points         Int            @default(0)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  // Relations
+  taughtCourses  Course[]       @relation("TeacherCourses")
+  attendances    AttendanceRecord[]
+  gateRecords    GateRecord[]
+  leaveRequests  LeaveRequest[]
+  moodLogs       MoodLog[]
+  safeMessages   SafeMessage[]  @relation("StudentSafeMessages")
+  advisorMessages SafeMessage[] @relation("AdvisorSafeMessages")
+  parentOf       ParentStudentLink[] @relation("ParentLink")
+  childOf        ParentStudentLink[] @relation("StudentLink")
+}
+
+model Course {
+  id          String         @id @default(cuid())
+  code        String         @unique // e.g. "MATH201"
+  name        String         // e.g. "คณิตศาสตร์เพิ่มเติม"
+  room        String         // e.g. "อาคาร 3 ห้อง 302"
+  targetRoom  String         // e.g. "ม.4/1"
+  latitude    Float          @default(13.7563)
+  longitude   Float          @default(100.5018)
+  radiusM     Int            @default(60)
+  teacherId   String
+  teacher     User           @relation("TeacherCourses", fields: [teacherId], references: [id])
+  sessions    ClassSession[]
+  createdAt   DateTime       @default(now())
+}
+
+model ClassSession {
+  id             String             @id @default(cuid())
+  courseId       String
+  sessionDate    DateTime           @default(now())
+  periodNumber   Int                @default(1)
+  startTime      String             // e.g. "08:30"
+  endTime        String             // e.g. "09:20"
+  qrToken        String?
+  qrExpiresAt    DateTime?
+  pinCode        String?
+  status         String             @default("SCHEDULED") // SCHEDULED, ACTIVE, CLOSED
+  course         Course             @relation(fields: [courseId], references: [id])
+  attendances    AttendanceRecord[]
+  createdAt      DateTime           @default(now())
+}
+
+model AttendanceRecord {
+  id             String           @id @default(cuid())
+  sessionId      String
+  studentId      String
+  status         String           @default("PRESENT") // PRESENT, LATE, LEAVE, ABSENT
+  checkinTime    DateTime?
+  method         String           @default("QR") // QR, GPS, MANUAL, PIN, GATE
+  latitude       Float?
+  longitude      Float?
+  note           String?
+  session        ClassSession     @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  student        User             @relation(fields: [studentId], references: [id])
+  createdAt      DateTime         @default(now())
+
+  @@unique([sessionId, studentId])
+}
+
+model GateRecord {
+  id             String       @id @default(cuid())
+  studentId      String
+  gateType       String       // IN, OUT
+  gateName       String       // e.g. "ประตู 1 (หน้าโรงเรียน)"
+  timestamp      DateTime     @default(now())
+  student        User         @relation(fields: [studentId], references: [id])
+}
+
+model LeaveRequest {
+  id             String       @id @default(cuid())
+  studentId      String
+  courseId       String?
+  leaveType      String       // SICK, BUSINESS, ACTIVITY
+  startDate      DateTime
+  endDate        DateTime
+  reason         String
+  attachmentUrl  String?
+  parentApproved Boolean      @default(false)
+  parentNote     String?
+  parentApprovedAt DateTime?
+  teacherStatus  String       @default("PENDING") // PENDING, APPROVED, REJECTED
+  teacherNote    String?
+  student        User         @relation(fields: [studentId], references: [id])
+  createdAt      DateTime     @default(now())
+}
+
+model MoodLog {
+  id        String   @id @default(cuid())
+  studentId String
+  mood      String   // HAPPY, NEUTRAL, TIRED, STRESSED, SAD
+  note      String?
+  date      DateTime @default(now())
+  student   User     @relation(fields: [studentId], references: [id])
+}
+
+model SafeMessage {
+  id          String       @id @default(cuid())
+  studentId   String
+  advisorId   String
+  category    String       // STUDY, FRIEND, FAMILY, STRESS, HEALTH, BULLYING
+  content     String
+  requestMeet Boolean      @default(false)
+  reply       String?
+  repliedAt   DateTime?
+  isRead      Boolean      @default(false)
+  createdAt   DateTime     @default(now())
+  student     User         @relation("StudentSafeMessages", fields: [studentId], references: [id])
+  advisor     User         @relation("AdvisorSafeMessages", fields: [advisorId], references: [id])
+}
+
+model Announcement {
+  id          String       @id @default(cuid())
+  title       String
+  content     String
+  priority    String       @default("NORMAL") // NORMAL, URGENT
+  targetRoom  String       @default("ALL")    // "ALL" or "ม.4/1"
+  senderName  String       // e.g. "อ.สมศรี ประจำชั้น ม.4/1"
+  readCount   Int          @default(0)
+  createdAt   DateTime     @default(now())
+}
+
+model ClassPrep {
+  id           String      @id @default(cuid())
+  targetRoom   String      // e.g. "ม.4/1"
+  dayOfWeek    Int         // 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri
+  uniformType  String      // e.g. "ชุดนักเรียน", "ชุดพละ", "ชุดลูกเสือ"
+  subjectName  String      // e.g. "ศิลปะ"
+  requiredItems String     // e.g. "จานสี, สีน้ำ, พู่กันเบอร์ 6"
+  homeworkTask String?     // e.g. "ส่งภาพวาดทิวทัศน์ 1 แผ่น"
+}
+
+model ParentStudentLink {
+  id           String      @id @default(cuid())
+  parentId     String
+  studentId    String
+  relationship String      @default("PARENT") // FATHER, MOTHER, GUARDIAN
+  parent       User        @relation("ParentLink", fields: [parentId], references: [id])
+  student      User        @relation("StudentLink", fields: [studentId], references: [id])
+
+  @@unique([parentId, studentId])
+}

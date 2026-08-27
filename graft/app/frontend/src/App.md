@@ -1,0 +1,18 @@
+# app\frontend\src\App.jsx
+
+- getCartKey · function · L16-L16 — getCartKey = (item)
+- loadCart · function · L18-L25 — loadCart = ()
+- loadUser · function · L27-L34 — loadUser = ()
+- App · function · L36-L368 — function App()
+- showToast · function · L47-L50 — showToast = (message)
+- raf · function · L92-L95 — function raf(time)
+- loadHealth · function · L106-L113 — async function loadHealth()
+- handleAddToCart · function · L117-L129 — handleAddToCart = (product)
+- handleUpdateQty · function · L131-L141 — handleUpdateQty = (key, delta)
+- handleRemoveItem · function · L143-L145 — handleRemoveItem = (key)
+- handleProceedToPayment · function · L147-L151 — handleProceedToPayment = ()
+- handleOpenCart · function · L153-L156 — handleOpenCart = ()
+- handleGoToHome · function · L158-L161 — handleGoToHome = ()
+- handleLogout · function · L163-L169 — handleLogout = ()
+- handleNavigate · function · L171-L212 — handleNavigate = (pathOrHash)
+- handleSelectFit · function · L214-L227 — handleSelectFit = (fit)

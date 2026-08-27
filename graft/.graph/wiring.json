@@ -1,0 +1,3722 @@
+{
+  "meta": {
+    "version": 1,
+    "nodeCount": 151,
+    "edgeCount": 258,
+    "languages": [
+      "tsx",
+      "typescript"
+    ],
+    "scopes": [
+      {
+        "prefix": "app",
+        "label": "app",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "app\\backend\\data\\products.js",
+      "name": "products.js",
+      "kind": "file",
+      "path": "app\\backend\\data\\products.js",
+      "span": "L1-L2736",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b0aa857732b2160f82f72e7afac10744b41ffa0159b15bede442c3afa89d1476",
+      "chars": 78925,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\backend\\server.js",
+      "name": "server.js",
+      "kind": "file",
+      "path": "app\\backend\\server.js",
+      "span": "L1-L200",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "bf090423146da60e46ec775b080247695c91ef7ff3cfe4490f298b653810d13e",
+      "chars": 6115,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\postcss.config.js",
+      "name": "postcss.config.js",
+      "kind": "file",
+      "path": "app\\frontend\\postcss.config.js",
+      "span": "L1-L6",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4cae941be9bc3bee9a6905e47ea7a51aee216d587d34a8cc4ae48f78fd6d8159",
+      "chars": 70,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx",
+      "name": "App.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L1-L369",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f965bdaaac98c3e10dafc1e9dccfe54d09f0268f784e18d7bbca94a246380fce",
+      "chars": 11870,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App",
+      "name": "App",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L36-L368",
+      "signature": "function App()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e997d7a7545374f1a14591f01abd0492b1f6c5f2e4e2d831549692c3c2d2a759",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleAddToCart",
+      "name": "handleAddToCart",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L117-L129",
+      "signature": "handleAddToCart = (product)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "ff2f6aac9608817194d5714e891ef01d4a4c6c1615572e6dffec7620ba690bb8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleGoToHome",
+      "name": "handleGoToHome",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L158-L161",
+      "signature": "handleGoToHome = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "8ba679ae721f287048503ab63b7ce0f6e5dd84842acb19c62ea50c0b19c1743f",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleLogout",
+      "name": "handleLogout",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L163-L169",
+      "signature": "handleLogout = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "68f1687bd656efb03605e649d475de91a1e6aeab1a979479740a2a96ee4a4840",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleNavigate",
+      "name": "handleNavigate",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L171-L212",
+      "signature": "handleNavigate = (pathOrHash)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "469887c6500de878cd4b26db2990266fc0234380ef6cc691a11d96355a0007d4",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleOpenCart",
+      "name": "handleOpenCart",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L153-L156",
+      "signature": "handleOpenCart = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4fa80b92fef41fcf9f630d945665164a8568a9699275c0ba61282162b8c34602",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleProceedToPayment",
+      "name": "handleProceedToPayment",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L147-L151",
+      "signature": "handleProceedToPayment = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4eddb365d98efb0a2b06fbeda5fbc18ea5f637a0cd70765aeab07badcafcb525",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleRemoveItem",
+      "name": "handleRemoveItem",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L143-L145",
+      "signature": "handleRemoveItem = (key)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "00384f4b1352b691b2be410fd4038f8ba72fcd8e90deafa379783a2969318350",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleSelectFit",
+      "name": "handleSelectFit",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L214-L227",
+      "signature": "handleSelectFit = (fit)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "947d923b8971aada628104be30b052bb738d63ba4cf7778b023a1586364ffe6e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.handleUpdateQty",
+      "name": "handleUpdateQty",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L131-L141",
+      "signature": "handleUpdateQty = (key, delta)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f21b29c42b6f86f47aa6b167f68652aa87fcde345aa8448c17c5208f59b4405a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.loadHealth",
+      "name": "loadHealth",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L106-L113",
+      "signature": "async function loadHealth()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "578a55ede7b56908629b9543a947a77a29150523c061db962939f30b7ca46f35",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.raf",
+      "name": "raf",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L92-L95",
+      "signature": "function raf(time)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3e32f3abab48a662313a14269128a29437c377ba89a8136fe376b42a54ae9c6d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#App.showToast",
+      "name": "showToast",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L47-L50",
+      "signature": "showToast = (message)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "904fc34b222c42bd9044b799d36466186052d477f55ba15c1ae0cc90644ea507",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#getCartKey",
+      "name": "getCartKey",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L16-L16",
+      "signature": "getCartKey = (item)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "967cadc364f800f666c1db5461fd58af1d3c7c5d88c4bd470050c5339b1af287",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#loadCart",
+      "name": "loadCart",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L18-L25",
+      "signature": "loadCart = ()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "a6b724f1a89ac46ce8f5464f9b03929e6da2ca76a3f57c468932999a39b2a23e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\App.jsx#loadUser",
+      "name": "loadUser",
+      "kind": "function",
+      "path": "app\\frontend\\src\\App.jsx",
+      "span": "L27-L34",
+      "signature": "loadUser = ()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "56f744770ef1a434cbe9891d2d52157529adcf01e7cd76adee3e3927009fe87c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\auth\\AuthModal.jsx",
+      "name": "AuthModal.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\auth\\AuthModal.jsx",
+      "span": "L1-L172",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "ffb0b84b5d299222d52c5679a13913b000aec1d0d9fb7f6bc34e6a6e07deccf7",
+      "chars": 7706,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\auth\\AuthModal.jsx#AuthModal",
+      "name": "AuthModal",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\auth\\AuthModal.jsx",
+      "span": "L4-L171",
+      "signature": "function AuthModal({ isOpen, onClose, initialMode = 'login' })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "271745e3bf8154e6ddaa025cb565602953aceb1ba0e50450b22644f1bdf47ece",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\auth\\AuthModal.jsx#AuthModal.handleSubmit",
+      "name": "handleSubmit",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\auth\\AuthModal.jsx",
+      "span": "L13-L20",
+      "signature": "handleSubmit = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "45680717f60d29f334a58bd49d51229e6008110201a8062b32407cb4189a4374",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx",
+      "name": "SignUpForm.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx",
+      "span": "L1-L88",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "28601b2de832e1f9d68be48be1da3761b77ab048187b89fcd0bcfcb79c59fcec",
+      "chars": 2405,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx#SignupForm",
+      "name": "SignupForm",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx",
+      "span": "L3-L88",
+      "signature": "function SignupForm()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "1f38e7f407c72baf601a255ae774db759ceada85ede8e377727c527e687935af",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx#SignupForm.handleChange",
+      "name": "handleChange",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx",
+      "span": "L11-L16",
+      "signature": "handleChange = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "be11042af8ea1196dfcc45de0b114b9f5a4eed47aab0cee7e83d5a3e9a06837c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx#SignupForm.handleSubmit",
+      "name": "handleSubmit",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx",
+      "span": "L18-L26",
+      "signature": "handleSubmit = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "d67934442e2efa7a51a5342174945b731b693572f7299c961aa21e1f32c9ae1e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "name": "BrandHero.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "span": "L1-L415",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "091e8b26eedaa3ddaf8ee0587c66fdf0aa7cd9fe7b616251cd068c7978edfda6",
+      "chars": 18699,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "name": "BrandHero",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "span": "L4-L414",
+      "signature": "function BrandHero({ onShopNow, onEnterWebsite })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9bbdaa26456cf8dd6e7769de34ace7f28d89bdf0aa66ef8578b348f7d7e827b8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.cycleSingleSlice",
+      "name": "cycleSingleSlice",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "span": "L151-L161",
+      "signature": "cycleSingleSlice = (sliceIndex)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b0ad3d27c17d42dbe7784a223bc58f3af5a97a13d509831f91af67bfb516a67b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.handleAction",
+      "name": "handleAction",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "span": "L179-L185",
+      "signature": "handleAction = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4f92d605b392a351c0a27213d0465ff324facf03117c412ea6e94d91cd35ffa8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.handleScroll",
+      "name": "handleScroll",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "span": "L12-L34",
+      "signature": "handleScroll = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "a8971e79bb659e247c0439dfc707a7dc0bbad953c2a3aea582b3a234c5f7f7ef",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.randomizeAll",
+      "name": "randomizeAll",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "span": "L102-L109",
+      "signature": "randomizeAll = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "bf4f5ec2b3a0d564733a95b85837892b19ca56070d5bd0b48bd2f8e1c688ab98",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.togglePlayAll",
+      "name": "togglePlayAll",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "span": "L145-L148",
+      "signature": "togglePlayAll = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "08a687b6342c164dd22eaf2f54bb6b4d4e3d7f741dddfd46a9b1c4b9ed7d7dac",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.togglePlaySlice",
+      "name": "togglePlaySlice",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "span": "L135-L142",
+      "signature": "togglePlaySlice = (sliceIndex, e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e6a3070dac5325cbad447e1ad1e654a222029bcd1df455dc73e22c4a27c31565",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandLoop.jsx",
+      "name": "BrandLoop.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\home\\BrandLoop.jsx",
+      "span": "L1-L40",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "fb3de9c0b930f13f7812bc491b08fc817135bb77834f726f35cb545b541bab47",
+      "chars": 1390,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\BrandLoop.jsx#BrandLoop",
+      "name": "BrandLoop",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\BrandLoop.jsx",
+      "span": "L7-L39",
+      "signature": "function BrandLoop()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "80bab22151ee2b498aeccb6074007b9de9658e86029b2d9202f144f10933d473",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\ChooseYourFit.jsx",
+      "name": "ChooseYourFit.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\home\\ChooseYourFit.jsx",
+      "span": "L1-L147",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "96558b957a2df72b5d8a0f16cd8c1d3cc8d7f9f44680cc2281a1bd8083530371",
+      "chars": 6328,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\ChooseYourFit.jsx#ChooseYourFit",
+      "name": "ChooseYourFit",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\ChooseYourFit.jsx",
+      "span": "L4-L146",
+      "signature": "function ChooseYourFit({ onSelectFit })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "658869ee353725989950b27414bc56399a82c1331198d577daaa7a6225e3ee2b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\JoinDropList.jsx",
+      "name": "JoinDropList.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\home\\JoinDropList.jsx",
+      "span": "L1-L132",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "8935336ebb6fb992be2045b464ed2d1d59e4e7fc4fcbbf2ede04aed9c3cae307",
+      "chars": 6669,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\JoinDropList.jsx#JoinDropList",
+      "name": "JoinDropList",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\JoinDropList.jsx",
+      "span": "L5-L131",
+      "signature": "function JoinDropList({ onSubscribe })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "5fecc445924e807a7a98a6e538e12118b1ead56219f6dd441beba68386471513",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\JoinDropList.jsx#JoinDropList.handleSubmit",
+      "name": "handleSubmit",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\JoinDropList.jsx",
+      "span": "L9-L14",
+      "signature": "handleSubmit = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "af01fbdadd59ec9a44871ab042b248aa0d8e08d5306c36a74781951ddcd61632",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\LastCallWarehouse.jsx",
+      "name": "LastCallWarehouse.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\home\\LastCallWarehouse.jsx",
+      "span": "L1-L151",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "29624de1225507948b515cb8434b7653889a74cdca84cfb3922e614b6b8e32d5",
+      "chars": 7018,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\LastCallWarehouse.jsx#LastCallWarehouse",
+      "name": "LastCallWarehouse",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\LastCallWarehouse.jsx",
+      "span": "L4-L150",
+      "signature": "function LastCallWarehouse({ onAddToCart, onQuickView, onExploreWarehouse })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "541473f8dd088367902b5f4d854357eb133985338740e5e7bb7f598eb81f4f68",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\PulsePerks.jsx",
+      "name": "PulsePerks.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\home\\PulsePerks.jsx",
+      "span": "L1-L153",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "edeeb2abda3ca543da8dac80f63d65bda87a4f8f33b707afa5d8fcb13f597da2",
+      "chars": 6397,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\PulsePerks.jsx#PulsePerks",
+      "name": "PulsePerks",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\PulsePerks.jsx",
+      "span": "L4-L152",
+      "signature": "function PulsePerks()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b83f0432b2a24a97e8d680c66c4093b110028505b25c1a4b469d295ff87bc78f",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\PulsePerks.jsx#PulsePerks.handleMouseLeave",
+      "name": "handleMouseLeave",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\PulsePerks.jsx",
+      "span": "L46-L50",
+      "signature": "handleMouseLeave = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "94f8dce2c83129f79b8fe87d46df3d2506fd209b786039331824188514418c3f",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\PulsePerks.jsx#PulsePerks.handleMouseMove",
+      "name": "handleMouseMove",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\PulsePerks.jsx",
+      "span": "L31-L44",
+      "signature": "handleMouseMove = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "51a6a806f35852f08a4e14d9a741bfd3c77f366fbf0750fe39a07faca3710823",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "name": "StreetFavorites.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "span": "L1-L235",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "000718c2cd386835f2132b0bbb9ccf777bf516f3e86df4e31260af8d582db9ac",
+      "chars": 9753,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavoriteCard",
+      "name": "StreetFavoriteCard",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "span": "L6-L123",
+      "signature": "function StreetFavoriteCard({ item, onAddToCart, onQuickView })",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "fe9bf582a563b72e032178e1b263660adb92090d21f7690df8ab69b8219f8107",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavoriteCard.handleColorClick",
+      "name": "handleColorClick",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "span": "L20-L28",
+      "signature": "handleColorClick = (e, v)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "e3f914d8ed859c20c97fa487b7a5025bc9cdc6df04d00ab5ed7d3b9a781550a7",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavorites",
+      "name": "StreetFavorites",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "span": "L125-L234",
+      "signature": "function StreetFavorites({ onAddToCart, onQuickView, onExploreCatalog })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c97a8c5b2f1bbae7e22e7a01444387398a8ec14dc2baf55883bd2dcca767b68c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavorites.scrollLeft",
+      "name": "scrollLeft",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "span": "L144-L148",
+      "signature": "scrollLeft = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "1809fd86efa6346956567e352aacb2a446a4bb8335dcdb766021a35f4fa802e5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavorites.scrollRight",
+      "name": "scrollRight",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "span": "L150-L154",
+      "signature": "scrollRight = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9fc86117251f200dbc7d0396ad53d7975f6d351dff1016056bef143951886a84",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\VdoSection.jsx",
+      "name": "VdoSection.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\home\\VdoSection.jsx",
+      "span": "L1-L77",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "a46388377a3be09d9f639f9719f352836df6e61cfe17acb37211d12073a4884c",
+      "chars": 3903,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\home\\VdoSection.jsx#VdoSection",
+      "name": "VdoSection",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\home\\VdoSection.jsx",
+      "span": "L4-L76",
+      "signature": "function VdoSection({ onClaimPromo })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e060e7a3f8598426fb8cc2bc9404b3adac3fad458b47f0a076c4657870955d8b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\layout\\Footer.jsx",
+      "name": "Footer.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\layout\\Footer.jsx",
+      "span": "L1-L68",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "aa04638e465e002459b42843f9d1d7aec119cc697e0b9ea5f9f13d16ab30a4fc",
+      "chars": 3505,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\layout\\Footer.jsx#Footer",
+      "name": "Footer",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\layout\\Footer.jsx",
+      "span": "L3-L67",
+      "signature": "function Footer()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7435b08006ae8ef64fe4c157e576afa2303e43989f6b9aae819ba6863b056d02",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\layout\\Layout.jsx",
+      "name": "Layout.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\layout\\Layout.jsx",
+      "span": "L1-L44",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0804aa9f7bbc3f83a7ba72b180891c0558e87592ab6afd922e39837769dc62e8",
+      "chars": 1086,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\layout\\Layout.jsx#Layout",
+      "name": "Layout",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\layout\\Layout.jsx",
+      "span": "L6-L43",
+      "signature": "function Layout({ children, cartCount = 0, onOpenCart, onNavigate, onGoToLanding, currentPage = 'home', currentUser = null, onLogout })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "8c715eb42b762b2d478ffb4d43b3f3899f44505980c48de56d2cf80993d048eb",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "name": "Navbar.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "span": "L1-L269",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "25adcb869363a5823b83b85889dcfdefb6d637264cc4dd602f9783ed26a3620a",
+      "chars": 12063,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar",
+      "name": "Navbar",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "span": "L6-L268",
+      "signature": "function Navbar({ cartCount = 0, onOpenCart, onNavigate, onGoToLanding, currentPage = 'home', currentUser = null, onLogout })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f8da25735a8b5cb6d84b610054e7881c832cba206282080b7c95570f9aa81746",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar.handleLinkClick",
+      "name": "handleLinkClick",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "span": "L43-L51",
+      "signature": "handleLinkClick = (href)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "8fae7a8944c0f40f5fdb7552a714a12d86bdbd67f38bb1e1062e393e43cb8881",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar.handleOpenAuth",
+      "name": "handleOpenAuth",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "span": "L37-L41",
+      "signature": "handleOpenAuth = (mode)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "18b11c1a0578601937a07bc12dc0b4f3f385590a24454e1fc1aa13171df326fd",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "name": "ProductCard.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "span": "L1-L287",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "1a099c9d9c6fe31e8974c79cc29fd29a86573406698d54365fb42819ce759930",
+      "chars": 12286,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard",
+      "name": "ProductCard",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "span": "L4-L286",
+      "signature": "function ProductCard({ product, onAddToCart, onQuickView, onToggleWishlist, isWishlisted = false })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "337fe04f6483959fb7f4982c3a336f7cb460766cf3001f34305ac7b8edd14a89",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleColorSelect",
+      "name": "handleColorSelect",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "span": "L28-L37",
+      "signature": "handleColorSelect = (e, variant)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "be23ef8180a4a75a7579b2e86b1f45a58504784cf886de57712bcdd329aac844",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleQuickAdd",
+      "name": "handleQuickAdd",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "span": "L44-L61",
+      "signature": "handleQuickAdd = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3f3ff2839ca6a1a15ee4cbb563e3cd0d581b4162c66eb846eac77d9cc666d0fb",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleSizeSelect",
+      "name": "handleSizeSelect",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "span": "L39-L42",
+      "signature": "handleSizeSelect = (e, size)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "79fbe5a11149aa1b76f6cbe87dfbacfce02ed0951c9953a0ef212a0127c67538",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleWishlistClick",
+      "name": "handleWishlistClick",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "span": "L63-L67",
+      "signature": "handleWishlistClick = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c6d8c98d5af4d3ec695d57daf3b7c6574c7bdf8e934fa7e23e4a639ace6d680e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "name": "ProductModal.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "span": "L1-L309",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "6e64b7e619e40ded719b930f42ba0c561a6b282fb9351191fa49a3433740046f",
+      "chars": 14480,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal",
+      "name": "ProductModal",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "span": "L4-L308",
+      "signature": "function ProductModal({ product, onClose, onAddToCart, onToggleWishlist, isWishlisted = false })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "bcf1cca08c6dd344b3b5f76656a650db1181a9b1d89dd323d70da583322aa798",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal.handleAdd",
+      "name": "handleAdd",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "span": "L46-L58",
+      "signature": "handleAdd = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "af52a151eb2f2aec14099702661e8e2e4e18d356e546f27951dc6f923735e698",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal.handleVariantChange",
+      "name": "handleVariantChange",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "span": "L37-L44",
+      "signature": "handleVariantChange = (v)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "885e515350d48b84ee8d67fae2611dff5e8cfdef50668c13d0d4ed91e7a1cb5e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal.handleWishlist",
+      "name": "handleWishlist",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "span": "L60-L64",
+      "signature": "handleWishlist = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "2b1809f75fa34a7c2a8e478b87c1609014dd0002a86e401eb4fec9b9924c30df",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\BorderBeam.jsx",
+      "name": "BorderBeam.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\ui\\BorderBeam.jsx",
+      "span": "L1-L40",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f5be65766987c384a90add6ec502fce0f11764fc0f8f118fe222191c6e8b0050",
+      "chars": 1322,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\BorderBeam.jsx#BorderBeam",
+      "name": "BorderBeam",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\BorderBeam.jsx",
+      "span": "L7-L39",
+      "signature": "function BorderBeam({ size = 200, duration = 12, anchor = 90, borderWidth = 1.5, colorFrom = '#BC5A36', // Terracotta colorTo = '#2D5A27', // Matcha Green delay = 0, className = '', })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "6af9f92eda8d6a83529daff97c5ebf321f3985365d886b31e0121190b6dac1cc",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx",
+      "name": "ScrollProgressTracker.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx",
+      "span": "L1-L39",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0ec86a2ef0e28558a4f819583514104b0be929ed4520d7acc3f04a5e163bbdc5",
+      "chars": 1357,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx#ScrollProgressTracker",
+      "name": "ScrollProgressTracker",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx",
+      "span": "L3-L38",
+      "signature": "function ScrollProgressTracker()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7b20b10133ac4fd753c8bfc615a7d8a12faadb19357c37ee77f3b3f5865aa6cf",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx#ScrollProgressTracker.handleScroll",
+      "name": "handleScroll",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx",
+      "span": "L8-L18",
+      "signature": "handleScroll = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3db45a7fab1403e43cb0ed396fc510adb7ed37d4ffa5975d6326542116617a72",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "name": "SpotlightCard.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "span": "L1-L68",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0f8d48094621885f51b6d75200858b69e3ef471b1719d0be2c525980c8dfe81c",
+      "chars": 1878,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard",
+      "name": "SpotlightCard",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "span": "L8-L67",
+      "signature": "function SpotlightCard({ children, className = '', spotlightColor = 'rgba(188, 90, 54, 0.12)', // MatchA Terracotta borderColor = 'rgba(45, 90, 39, 0.3)', // MatchA Green ...props })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "19797aa9febbca3eba4e75c6ca1828b08fd6963ef7c31ca2b02c6d2b0458cac7",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleBlur",
+      "name": "handleBlur",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "span": "L32-L35",
+      "signature": "handleBlur = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "080ed5a2b6acebc3d2563c4bf3b0657843fb441109c7497646c6b006e2e332d5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleFocus",
+      "name": "handleFocus",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "span": "L27-L30",
+      "signature": "handleFocus = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7f5655af6afc5d52d6eeb91f2014d00acdfa130f2185e71b56c78238c03d47ae",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleMouseEnter",
+      "name": "handleMouseEnter",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "span": "L37-L39",
+      "signature": "handleMouseEnter = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "89cd4fc4c1e31ad74b8eeb2dd80488e50abc70dad22ff4bc1657204027649ff9",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleMouseLeave",
+      "name": "handleMouseLeave",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "span": "L41-L43",
+      "signature": "handleMouseLeave = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e5811c403fd5c3b5b356ab2bb0674fb501fb70ca8fa5993a6cdf301863ca2981",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleMouseMove",
+      "name": "handleMouseMove",
+      "kind": "function",
+      "path": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "span": "L20-L25",
+      "signature": "handleMouseMove = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "99f12d2da68c91a8e869f8c1e6e4df99af416d5b609dfbdc154c8c3a9622f72f",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\data\\productsData.js",
+      "name": "productsData.js",
+      "kind": "file",
+      "path": "app\\frontend\\src\\data\\productsData.js",
+      "span": "L1-L2734",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "cf7d86e94cd27d7b740c64e95a35636fd41577d9ba9aa8b8532ec53e315ade6f",
+      "chars": 78906,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\main.jsx",
+      "name": "main.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\main.jsx",
+      "span": "L1-L14",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "da64ea83d01c0bfeb66c6a22f8225073c48c040ad98c271965ba26712f3e76d9",
+      "chars": 333,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "name": "CartPage.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "span": "L1-L191",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9ce07f368d87147c4166b48e602a0f9044984e5e4b5c7a2fe3018c65337162d2",
+      "chars": 9441,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CartPage.jsx#CartPage",
+      "name": "CartPage",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "span": "L8-L190",
+      "signature": "function CartPage({ cartItems = [], onUpdateQty, onRemove, onBackToStore, onCheckout })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9c3a9530f209eec6cb30452ece0768d96f8d8dedcc2f91dc64b9cb2583dca9e3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CartPage.jsx#getCartKey",
+      "name": "getCartKey",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "span": "L6-L6",
+      "signature": "getCartKey = (item)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "967cadc364f800f666c1db5461fd58af1d3c7c5d88c4bd470050c5339b1af287",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CartPage.jsx#parsePrice",
+      "name": "parsePrice",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "span": "L4-L4",
+      "signature": "parsePrice = (price)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "a20886a2b4fbba4c1eb70201511297c55eb715dde85b456f84f6bfa9bf422550",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "name": "CatalogPage.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "span": "L1-L838",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e7a7a896a0d6999f6cbdc742059c87b1c390a96f8192877eade6248455e80132",
+      "chars": 40705,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage",
+      "name": "CatalogPage",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "span": "L10-L837",
+      "signature": "function CatalogPage({ initialCategory = 'ALL', onBackToHome, onAddToCart, onQuickView, onSelectFit })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "931b669429f61d9d85b3455ad4274daa2ab21ab2102abeadad9272e45bcaba81",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage.fetchCats",
+      "name": "fetchCats",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "span": "L74-L81",
+      "signature": "async function fetchCats()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3ffb9c536f705d6e0bc9ed3f8479a605846b10d4db78e7a74d973f890d3debce",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage.handleResetFilters",
+      "name": "handleResetFilters",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "span": "L143-L153",
+      "signature": "handleResetFilters = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "2b08b72b7608e22e0a60fdbf9ed4762fdf45fa8154b262891352eff08dfe2818",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage.loadProducts",
+      "name": "loadProducts",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "span": "L88-L113",
+      "signature": "async function loadProducts()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "30d4b50689e50d4b0304357110591c883620570602eef29da476fcc9d917da75",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "name": "HomePage.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "span": "L1-L66",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "a5e24d76ff101761db1099d76fbd6f137f07101f6d4f7adb33057153ba215184",
+      "chars": 2149,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\HomePage.jsx#HomePage",
+      "name": "HomePage",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "span": "L10-L65",
+      "signature": "function HomePage({ onSelectFit, onClaimPromo, onAddToCart, onQuickView, onExploreWarehouse, onSubscribe, })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c56b1b5087cd81aa9eda2e52da0db5803e8eb1512a35cd53420af9a570d34e02",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\HomePage.jsx#HomePage.handleScrollToFit",
+      "name": "handleScrollToFit",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "span": "L18-L21",
+      "signature": "handleScrollToFit = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "8290ce604af7a777637ac708947f5250738a128cbd7105c0cd605f1bd07e64e3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "name": "LoginPage.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "span": "L1-L384",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f6090f274a8de785890577c5f9a7a8bb6fb412d11e7e1aaba478fca2b34c723b",
+      "chars": 15927,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage",
+      "name": "LoginPage",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "span": "L22-L383",
+      "signature": "function LoginPage({ onLoginSuccess })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "a1ad9a345e8ff7258704b8962a0739fc6ae1fe5144fdb5a228de9e7ffb222055",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage.handleFillDemo",
+      "name": "handleFillDemo",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "span": "L85-L92",
+      "signature": "handleFillDemo = (type)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "2665d92881a87da7f7ea3ce610884b0cbab7d84f758be3e8c8ae598d0417838d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage.handleLogin",
+      "name": "handleLogin",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "span": "L36-L83",
+      "signature": "handleLogin = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "1977d821aa892d8777388fc826b6f19bff66fd473942a4ae24ebb11ea13b26c6",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage.handleSendReset",
+      "name": "handleSendReset",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "span": "L94-L103",
+      "signature": "handleSendReset = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4d2efc3bc4f97009939adb40baa66ad35058e118f3450fbff37587eb081898bc",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx",
+      "name": "Payment.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L1-L865",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "286461e5c23f873bf9e8224be846c9c834ed7163eee2f964055c9c2e8e64760a",
+      "chars": 44598,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "name": "Payment",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L36-L865",
+      "signature": "function Payment({ cartItems = [], onUpdateCart })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "abc582f039ffa865aad59739c3bd06531e0f4a5dec7ca1a42c8e6f28e6de573d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.applyCoupon",
+      "name": "applyCoupon",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L148-L162",
+      "signature": "applyCoupon = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e7e79cecb3c04283192ba5f6ff38dae63ac34e479237db815974b2f6cf65440b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateDiscount",
+      "name": "calculateDiscount",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L84-L92",
+      "signature": "calculateDiscount = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7e590a7aedd1f36938041b636bf83fd96ca85cee936436523a95aa88f4b2109c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateShipping",
+      "name": "calculateShipping",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L78-L82",
+      "signature": "calculateShipping = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e2d80cbcee0c89f00195424bf197bb9e13244f0524faf6f4b015ba9c41979cb0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateSubtotal",
+      "name": "calculateSubtotal",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L74-L76",
+      "signature": "calculateSubtotal = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4d9884246d44598ba5b693cca49a3ce929a410f823c14226da15adbf05cecf2b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateTotal",
+      "name": "calculateTotal",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L94-L96",
+      "signature": "calculateTotal = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "851dee5056ed5e20a40d6755b51d9f31d744036f68b6402248e18d13cce1ed61",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.formatPrice",
+      "name": "formatPrice",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L178-L178",
+      "signature": "formatPrice = (price)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "384a3275acc0265676427e768023ffa4487cff2a0fa32226493f875f77c27330",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.getItemImage",
+      "name": "getItemImage",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L180-L180",
+      "signature": "getItemImage = (item)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "be9c5359e98b2b08d7beb6e563d4004cda7c5e90d3ac5335fa9c52f34c77b316",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.getItemPrice",
+      "name": "getItemPrice",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L64-L72",
+      "signature": "getItemPrice = (item)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4baddc41e5e98abcee864faedf2568bf56669fa4e66ac70de9e6b09df7544afc",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleNextStep",
+      "name": "handleNextStep",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L112-L120",
+      "signature": "handleNextStep = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "59857153fcb176db7bb24db20d33559766e6482ffb1ceb29bc9a6189fba87f18",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handlePlaceOrder",
+      "name": "handlePlaceOrder",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L168-L176",
+      "signature": "handlePlaceOrder = async ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "918b4d90521ea1346b6ec418ef127bb6f7f824d3a62274bf7f14ba691cd69de0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handlePrevStep",
+      "name": "handlePrevStep",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L122-L125",
+      "signature": "handlePrevStep = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e6d836b004a2df1d568398739c85eb07c8cfc9cb2853df171e3f7cc93868ba5a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleQuantityChange",
+      "name": "handleQuantityChange",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L98-L106",
+      "signature": "handleQuantityChange = (itemId, delta)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "90d45644060b1bd18d2536d191ae5cbd202603bfb7d520a51cae0b4204177c38",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleRemoveItem",
+      "name": "handleRemoveItem",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L108-L110",
+      "signature": "handleRemoveItem = (itemId)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "d24e9542a4da3a05ea640a4db75a998bf67b1d9581904cb342aa2afcccc5aa8c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.removeCoupon",
+      "name": "removeCoupon",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L164-L166",
+      "signature": "removeCoupon = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f62ba83a583a7b4aea09ad80305b4fd62fdafb22e8b1e0519836f9dbd080f30b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.validateCardForm",
+      "name": "validateCardForm",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L137-L146",
+      "signature": "validateCardForm = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "fc825f5ad495b8c2bfab04506bb612ba95b9716fa1f53ee9b87c2061d1132dd3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\Payment.jsx#Payment.validateShippingForm",
+      "name": "validateShippingForm",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\Payment.jsx",
+      "span": "L127-L135",
+      "signature": "validateShippingForm = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "8492a3d027ef90ee2a3f8a96290baf4ec1522fd1c24d545fc0e42eb573020777",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\SignUpPage.jsx",
+      "name": "SignUpPage.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\pages\\SignUpPage.jsx",
+      "span": "L1-L37",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "aa7a8b25446900f153bab97cbe4dfe150c7071e463ffc6fb727a71db81049b4c",
+      "chars": 1577,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\SignUpPage.jsx#SignUpPage",
+      "name": "SignUpPage",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\SignUpPage.jsx",
+      "span": "L5-L37",
+      "signature": "function SignUpPage({ onBackToStore })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "086f237f43b0585a15c96070310840348a57e364ac41be4a3471d94dd93a1a83",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "name": "UserAccount.jsx",
+      "kind": "file",
+      "path": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "span": "L1-L674",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c812d7c2027662e4e046d565bafb5a57097ef9ebdf398f3748bdc42d0a01a919",
+      "chars": 36848,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount",
+      "name": "UserAccount",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "span": "L25-L674",
+      "signature": "function UserAccount({ cartCount = 0, onOpenCart, onNavigate, onGoToLanding, currentPage = 'account', user = null, userProfile = null, orders = [], favorites = [], addresses = [], paymentMethods = [], userPreferences = null, onAddToCart, onRemoveFavorite, onSaveProfile, onAddAddress, onAddPaymentMethod, onSavePreferences, onLogout })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3167a8d7798d8c055415f3ab759ff74827399401674f8637a9e75478524b04a5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount.handlePreferenceToggle",
+      "name": "handlePreferenceToggle",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "span": "L108-L114",
+      "signature": "handlePreferenceToggle = (key)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c1ad6b95b43f011e2a921ffce19c1773538837ac2d121e32dc59270ba23563f7",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount.handleProfileSave",
+      "name": "handleProfileSave",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "span": "L99-L106",
+      "signature": "handleProfileSave = (e)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "928b34baa286ebef1ea7e5d75e5ee1a5660dc790231e0a56b1c30560077198f6",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount.handleTabClick",
+      "name": "handleTabClick",
+      "kind": "function",
+      "path": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "span": "L90-L97",
+      "signature": "handleTabClick = (tabId)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "64ca9a1eecdfeda7defc1dbf6a9f312b00b59c107ab7ebbcdaad0f5c77a0a03a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\services\\api.js",
+      "name": "api.js",
+      "kind": "file",
+      "path": "app\\frontend\\src\\services\\api.js",
+      "span": "L1-L173",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "feb209cc7ae530f03124dee6bc68d24eb99a423e46ebf41c8a29cdf1aad20dee",
+      "chars": 5263,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\src\\services\\api.js#fetchWithFallback",
+      "name": "fetchWithFallback",
+      "kind": "function",
+      "path": "app\\frontend\\src\\services\\api.js",
+      "span": "L6-L23",
+      "signature": "async function fetchWithFallback(endpoint)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "53ff39bd0d6f182d82a101ddf8f8048da049d0d63315015aab807b0e63b91900",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\tailwind.config.js",
+      "name": "tailwind.config.js",
+      "kind": "file",
+      "path": "app\\frontend\\tailwind.config.js",
+      "span": "L1-L30",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "2ca76f4df5a56d00c5356d088b73ef5be68427dd848012cb73479719554b2728",
+      "chars": 951,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\frontend\\vite.config.js",
+      "name": "vite.config.js",
+      "kind": "file",
+      "path": "app\\frontend\\vite.config.js",
+      "span": "L1-L25",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "cc16b9f693a9d11ab70c4f88bd3ea109187cf87ab6edb500f3656babfd1fd3ef",
+      "chars": 463,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProducts.js",
+      "name": "importProducts.js",
+      "kind": "file",
+      "path": "app\\scripts\\importProducts.js",
+      "span": "L1-L185",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "caaa3d1d41cbaad0d76d95b49a315de2555dd88417c4e6f9c0912c0d9112382d",
+      "chars": 7076,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProducts.js#capitalize",
+      "name": "capitalize",
+      "kind": "function",
+      "path": "app\\scripts\\importProducts.js",
+      "span": "L6-L9",
+      "signature": "function capitalize(str)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d9fe1db8e5c2aeee3519fe4d560752fb260fde15e76dd27acad1e3e3d2f78c53",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProducts.js#formatName",
+      "name": "formatName",
+      "kind": "function",
+      "path": "app\\scripts\\importProducts.js",
+      "span": "L11-L13",
+      "signature": "function formatName(str)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "cf8b6edacd4c5df4ee0e5a2d5953f1c4ae3067e55cbad1a6ce027f28ac2962c3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProducts.js#getBasePrice",
+      "name": "getBasePrice",
+      "kind": "function",
+      "path": "app\\scripts\\importProducts.js",
+      "span": "L71-L82",
+      "signature": "function getBasePrice(category, subCat)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d4bd093e699170d41f1ce1750782b588545752c907d0c208bf4aa85a6877d6d6",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProducts.js#getCategory",
+      "name": "getCategory",
+      "kind": "function",
+      "path": "app\\scripts\\importProducts.js",
+      "span": "L49-L60",
+      "signature": "function getCategory(folderCat, subCat)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "09897f7399ca79b9d4af6697e5783e9f3986a3e2aa77817f4be63401e165958e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProducts.js#getColorHex",
+      "name": "getColorHex",
+      "kind": "function",
+      "path": "app\\scripts\\importProducts.js",
+      "span": "L42-L47",
+      "signature": "function getColorHex(colorKey)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "26bc348fd561daff0a9077da97896c33992be6050c4194caffb78b09a6d36ef4",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProducts.js#getFit",
+      "name": "getFit",
+      "kind": "function",
+      "path": "app\\scripts\\importProducts.js",
+      "span": "L62-L69",
+      "signature": "function getFit(category, subCat)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "9af4cf1124890b7e5e3ab89b0195345c1f20e7347c09ff8189301c8c43b5f585",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProducts.js#walk",
+      "name": "walk",
+      "kind": "function",
+      "path": "app\\scripts\\importProducts.js",
+      "span": "L87-L168",
+      "signature": "function walk(dir, relPath = '')",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "b2338bab17c77c64386ea6277abd5d54c189d2e33c7db073b58aa1cc54d22699",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProductsGrouped.js",
+      "name": "importProductsGrouped.js",
+      "kind": "file",
+      "path": "app\\scripts\\importProductsGrouped.js",
+      "span": "L1-L212",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "88f3e8b528e80c721963aaba78d2001143b093caf388c2dead027c94162cdd90",
+      "chars": 7795,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProductsGrouped.js#capitalize",
+      "name": "capitalize",
+      "kind": "function",
+      "path": "app\\scripts\\importProductsGrouped.js",
+      "span": "L6-L9",
+      "signature": "function capitalize(str)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d9fe1db8e5c2aeee3519fe4d560752fb260fde15e76dd27acad1e3e3d2f78c53",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProductsGrouped.js#formatName",
+      "name": "formatName",
+      "kind": "function",
+      "path": "app\\scripts\\importProductsGrouped.js",
+      "span": "L11-L13",
+      "signature": "function formatName(str)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "cf8b6edacd4c5df4ee0e5a2d5953f1c4ae3067e55cbad1a6ce027f28ac2962c3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProductsGrouped.js#getBasePrice",
+      "name": "getBasePrice",
+      "kind": "function",
+      "path": "app\\scripts\\importProductsGrouped.js",
+      "span": "L72-L83",
+      "signature": "function getBasePrice(category, subCat)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "f651c2b376a54f46a77df776b78b35eb9e457a37ecd3e706375a6d1dc4727a4d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProductsGrouped.js#getCategory",
+      "name": "getCategory",
+      "kind": "function",
+      "path": "app\\scripts\\importProductsGrouped.js",
+      "span": "L50-L61",
+      "signature": "function getCategory(folderCat, subCat)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "09897f7399ca79b9d4af6697e5783e9f3986a3e2aa77817f4be63401e165958e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProductsGrouped.js#getColorHex",
+      "name": "getColorHex",
+      "kind": "function",
+      "path": "app\\scripts\\importProductsGrouped.js",
+      "span": "L43-L48",
+      "signature": "function getColorHex(colorKey)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "26bc348fd561daff0a9077da97896c33992be6050c4194caffb78b09a6d36ef4",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProductsGrouped.js#getFit",
+      "name": "getFit",
+      "kind": "function",
+      "path": "app\\scripts\\importProductsGrouped.js",
+      "span": "L63-L70",
+      "signature": "function getFit(category, subCat)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "ab326fd76de6742f2b463fb6b9f704a79adf6cc9e15ac5755c0702e91c541d9a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "app\\scripts\\importProductsGrouped.js#scanDir",
+      "name": "scanDir",
+      "kind": "function",
+      "path": "app\\scripts\\importProductsGrouped.js",
+      "span": "L88-L143",
+      "signature": "function scanDir(dir, relPath = '')",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d0d8f5be47355a4550a7398f58d093540cac39bbf0cfde27223307eed85d6116",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "app\\frontend\\src\\App.jsx#App",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "app\\frontend\\src\\App.jsx#getCartKey",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "app\\frontend\\src\\App.jsx#loadCart",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "app\\frontend\\src\\App.jsx#loadUser",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./components/layout/Layout",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./components/product/ProductModal",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./pages/CartPage",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./pages/CatalogPage",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./pages/HomePage",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./pages/LoginPage",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./pages/Payment",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./pages/SignUpPage",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./pages/UserAccount",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "./services/api",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "lenis",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx",
+      "target": "react-router-dom",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.loadHealth",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.showToast",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleAddToCart",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleGoToHome",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleLogout",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleNavigate",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleOpenCart",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleProceedToPayment",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleRemoveItem",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleSelectFit",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.handleUpdateQty",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.loadHealth",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.raf",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App",
+      "target": "app\\frontend\\src\\App.jsx#App.showToast",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App.handleAddToCart",
+      "target": "app\\frontend\\src\\App.jsx#getCartKey",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App.handleNavigate",
+      "target": "app\\frontend\\src\\App.jsx#App.handleOpenCart",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App.handleNavigate",
+      "target": "app\\frontend\\src\\App.jsx#App.handleProceedToPayment",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App.handleRemoveItem",
+      "target": "app\\frontend\\src\\App.jsx#getCartKey",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\App.jsx#App.handleUpdateQty",
+      "target": "app\\frontend\\src\\App.jsx#getCartKey",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\auth\\AuthModal.jsx",
+      "target": "app\\frontend\\src\\components\\auth\\AuthModal.jsx#AuthModal",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\auth\\AuthModal.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\auth\\AuthModal.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\auth\\AuthModal.jsx#AuthModal",
+      "target": "app\\frontend\\src\\components\\auth\\AuthModal.jsx#AuthModal.handleSubmit",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx",
+      "target": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx#SignupForm",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx#SignupForm",
+      "target": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx#SignupForm.handleChange",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx#SignupForm",
+      "target": "app\\frontend\\src\\components\\auth\\SignUpForm.jsx#SignupForm.handleSubmit",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.cycleSingleSlice",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.handleScroll",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.togglePlaySlice",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.cycleSingleSlice",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.handleAction",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.handleScroll",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.randomizeAll",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.togglePlayAll",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero",
+      "target": "app\\frontend\\src\\components\\home\\BrandHero.jsx#BrandHero.togglePlaySlice",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandLoop.jsx",
+      "target": "app\\frontend\\src\\components\\home\\BrandLoop.jsx#BrandLoop",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\BrandLoop.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\ChooseYourFit.jsx",
+      "target": "app\\frontend\\src\\components\\home\\ChooseYourFit.jsx#ChooseYourFit",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\ChooseYourFit.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\ChooseYourFit.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\JoinDropList.jsx",
+      "target": "app\\frontend\\src\\components\\home\\JoinDropList.jsx#JoinDropList",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\JoinDropList.jsx",
+      "target": "../ui/BorderBeam",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\JoinDropList.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\JoinDropList.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\JoinDropList.jsx#JoinDropList",
+      "target": "app\\frontend\\src\\components\\home\\JoinDropList.jsx#JoinDropList.handleSubmit",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\LastCallWarehouse.jsx",
+      "target": "app\\frontend\\src\\components\\home\\LastCallWarehouse.jsx#LastCallWarehouse",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\LastCallWarehouse.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\LastCallWarehouse.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\PulsePerks.jsx",
+      "target": "app\\frontend\\src\\components\\home\\PulsePerks.jsx#PulsePerks",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\PulsePerks.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\PulsePerks.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\PulsePerks.jsx#PulsePerks",
+      "target": "app\\frontend\\src\\components\\home\\PulsePerks.jsx#PulsePerks.handleMouseLeave",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\PulsePerks.jsx#PulsePerks",
+      "target": "app\\frontend\\src\\components\\home\\PulsePerks.jsx#PulsePerks.handleMouseMove",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "target": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavoriteCard",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "target": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavorites",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "target": "../../data/productsData",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "target": "../ui/SpotlightCard",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavoriteCard",
+      "target": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavoriteCard.handleColorClick",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavoriteCard",
+      "target": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavoriteCard.handleColorClick",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavorites",
+      "target": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavorites.scrollLeft",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavorites",
+      "target": "app\\frontend\\src\\components\\home\\StreetFavorites.jsx#StreetFavorites.scrollRight",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\VdoSection.jsx",
+      "target": "app\\frontend\\src\\components\\home\\VdoSection.jsx#VdoSection",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\VdoSection.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\home\\VdoSection.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Footer.jsx",
+      "target": "app\\frontend\\src\\components\\layout\\Footer.jsx#Footer",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Footer.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Layout.jsx",
+      "target": "app\\frontend\\src\\components\\layout\\Layout.jsx#Layout",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Layout.jsx",
+      "target": "../ui/ScrollProgressTracker",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Layout.jsx",
+      "target": "./Footer",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Layout.jsx",
+      "target": "./Navbar",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Layout.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "target": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "target": "../auth/AuthModal",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "target": "../ui/BorderBeam",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Navbar.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar",
+      "target": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar.handleLinkClick",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar",
+      "target": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar.handleLinkClick",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar",
+      "target": "app\\frontend\\src\\components\\layout\\Navbar.jsx#Navbar.handleOpenAuth",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "target": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard",
+      "target": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleColorSelect",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard",
+      "target": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleSizeSelect",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard",
+      "target": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleColorSelect",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard",
+      "target": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleQuickAdd",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard",
+      "target": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleSizeSelect",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard",
+      "target": "app\\frontend\\src\\components\\product\\ProductCard.jsx#ProductCard.handleWishlistClick",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "target": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductModal.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal",
+      "target": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal.handleVariantChange",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal",
+      "target": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal.handleAdd",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal",
+      "target": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal.handleVariantChange",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal",
+      "target": "app\\frontend\\src\\components\\product\\ProductModal.jsx#ProductModal.handleWishlist",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\BorderBeam.jsx",
+      "target": "app\\frontend\\src\\components\\ui\\BorderBeam.jsx#BorderBeam",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\BorderBeam.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx",
+      "target": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx#ScrollProgressTracker",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx#ScrollProgressTracker",
+      "target": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx#ScrollProgressTracker.handleScroll",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx#ScrollProgressTracker",
+      "target": "app\\frontend\\src\\components\\ui\\ScrollProgressTracker.jsx#ScrollProgressTracker.handleScroll",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "target": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard",
+      "target": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleBlur",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard",
+      "target": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleFocus",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard",
+      "target": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleMouseEnter",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard",
+      "target": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleMouseLeave",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard",
+      "target": "app\\frontend\\src\\components\\ui\\SpotlightCard.jsx#SpotlightCard.handleMouseMove",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\main.jsx",
+      "target": "./App.jsx",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\main.jsx",
+      "target": "./index.css",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\main.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\main.jsx",
+      "target": "react-dom/client",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\main.jsx",
+      "target": "react-router-dom",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "target": "app\\frontend\\src\\pages\\CartPage.jsx#CartPage",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "target": "app\\frontend\\src\\pages\\CartPage.jsx#getCartKey",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "target": "app\\frontend\\src\\pages\\CartPage.jsx#parsePrice",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CartPage.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CartPage.jsx#CartPage",
+      "target": "app\\frontend\\src\\pages\\CartPage.jsx#getCartKey",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CartPage.jsx#CartPage",
+      "target": "app\\frontend\\src\\pages\\CartPage.jsx#parsePrice",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "target": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "target": "../components/product/ProductCard",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "target": "../services/api",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage",
+      "target": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage.fetchCats",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage",
+      "target": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage.loadProducts",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage",
+      "target": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage.fetchCats",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage",
+      "target": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage.handleResetFilters",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage",
+      "target": "app\\frontend\\src\\pages\\CatalogPage.jsx#CatalogPage.loadProducts",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "app\\frontend\\src\\pages\\HomePage.jsx#HomePage",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "../components/home/BrandHero",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "../components/home/BrandLoop",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "../components/home/ChooseYourFit",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "../components/home/JoinDropList",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "../components/home/PulsePerks",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "../components/home/StreetFavorites",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "../components/home/VdoSection",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\HomePage.jsx#HomePage",
+      "target": "app\\frontend\\src\\pages\\HomePage.jsx#HomePage.handleScrollToFit",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "target": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\LoginPage.jsx",
+      "target": "react-router-dom",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage",
+      "target": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage.handleFillDemo",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage",
+      "target": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage.handleFillDemo",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage",
+      "target": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage.handleLogin",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage",
+      "target": "app\\frontend\\src\\pages\\LoginPage.jsx#LoginPage.handleSendReset",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateDiscount",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateShipping",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateSubtotal",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateTotal",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.formatPrice",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.getItemImage",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.getItemPrice",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleQuantityChange",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleRemoveItem",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.validateCardForm",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.validateShippingForm",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.applyCoupon",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateDiscount",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateShipping",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateSubtotal",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateTotal",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.formatPrice",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.getItemImage",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.getItemPrice",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleNextStep",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handlePlaceOrder",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handlePrevStep",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleQuantityChange",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleRemoveItem",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.removeCoupon",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.validateCardForm",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.validateShippingForm",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment.applyCoupon",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateSubtotal",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateDiscount",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateSubtotal",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateSubtotal",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.getItemPrice",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateTotal",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateDiscount",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateTotal",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateShipping",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateTotal",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.calculateSubtotal",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handleNextStep",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.validateShippingForm",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\Payment.jsx#Payment.handlePlaceOrder",
+      "target": "app\\frontend\\src\\pages\\Payment.jsx#Payment.validateCardForm",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\SignUpPage.jsx",
+      "target": "app\\frontend\\src\\pages\\SignUpPage.jsx#SignUpPage",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\SignUpPage.jsx",
+      "target": "../components/auth/SignUpForm",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\SignUpPage.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\SignUpPage.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "target": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "target": "lucide-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\UserAccount.jsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount",
+      "target": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount.handlePreferenceToggle",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount",
+      "target": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount.handleTabClick",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount",
+      "target": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount.handlePreferenceToggle",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount",
+      "target": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount.handleProfileSave",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount",
+      "target": "app\\frontend\\src\\pages\\UserAccount.jsx#UserAccount.handleTabClick",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\services\\api.js",
+      "target": "app\\frontend\\src\\services\\api.js#fetchWithFallback",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\services\\api.js",
+      "target": "app\\frontend\\src\\services\\api.js#fetchWithFallback",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\src\\services\\api.js",
+      "target": "../data/productsData",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\vite.config.js",
+      "target": "@tailwindcss/vite",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\vite.config.js",
+      "target": "@vitejs/plugin-react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\frontend\\vite.config.js",
+      "target": "vite",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js",
+      "target": "app\\scripts\\importProducts.js#walk",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js",
+      "target": "app\\scripts\\importProducts.js#capitalize",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js",
+      "target": "app\\scripts\\importProducts.js#formatName",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js",
+      "target": "app\\scripts\\importProducts.js#getBasePrice",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js",
+      "target": "app\\scripts\\importProducts.js#getCategory",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js",
+      "target": "app\\scripts\\importProducts.js#getColorHex",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js",
+      "target": "app\\scripts\\importProducts.js#getFit",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js",
+      "target": "app\\scripts\\importProducts.js#walk",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js#walk",
+      "target": "app\\scripts\\importProducts.js#capitalize",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js#walk",
+      "target": "app\\scripts\\importProducts.js#formatName",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js#walk",
+      "target": "app\\scripts\\importProducts.js#getBasePrice",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js#walk",
+      "target": "app\\scripts\\importProducts.js#getCategory",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js#walk",
+      "target": "app\\scripts\\importProducts.js#getColorHex",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js#walk",
+      "target": "app\\scripts\\importProducts.js#getFit",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProducts.js#walk",
+      "target": "app\\scripts\\importProducts.js#walk",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#capitalize",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#formatName",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#getBasePrice",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#getCategory",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#getFit",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#scanDir",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#capitalize",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#formatName",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#getBasePrice",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#getCategory",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#getColorHex",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#getFit",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js",
+      "target": "app\\scripts\\importProductsGrouped.js#scanDir",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js#scanDir",
+      "target": "app\\scripts\\importProductsGrouped.js#formatName",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js#scanDir",
+      "target": "app\\scripts\\importProductsGrouped.js#getColorHex",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "app\\scripts\\importProductsGrouped.js#scanDir",
+      "target": "app\\scripts\\importProductsGrouped.js#scanDir",
+      "relation": "calls",
+      "confidence": "extracted"
+    }
+  ]
+}
