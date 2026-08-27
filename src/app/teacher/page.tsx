@@ -18,7 +18,11 @@ import {
   Eye,
   Check,
   X,
-  Volume2,
+  BookOpen,
+  PlusCircle,
+  Trash2,
+  Calendar,
+  Layers,
 } from "lucide-react";
 import { QRDisplay } from "@/components/QRDisplay";
 import { SkeletonCard, EmptyState, ErrorState } from "@/components/UIStates";
@@ -27,12 +31,19 @@ import { LineSimulatorModal } from "@/components/LineSimulatorModal";
 export default function TeacherHubPage() {
   const [sessions, setSessions] = useState<any[]>([]);
   const [activeSession, setActiveSession] = useState<any | null>(null);
-  const [attendances, setAttendances] = useState<any[]>([]);
   const [leaves, setLeaves] = useState<any[]>([]);
   const [safeMessages, setSafeMessages] = useState<any[]>([]);
   const [students, setStudents] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Homework Radar state
+  const [homeworkData, setHomeworkData] = useState<any | null>(null);
+  const [hwTitle, setHwTitle] = useState("");
+  const [hwDueLabel, setHwDueLabel] = useState("ส่งคาบหน้า");
+  const [hwEstimatedMin, setHwEstimatedMin] = useState<string>("");
+  const [isLoggingHw, setIsLoggingHw] = useState(false);
+  const [hwSuccessMsg, setHwSuccessMsg] = useState<string | null>(null);
 
   // Announcement state
   const [announcementTitle, setAnnouncementTitle] = useState("");
@@ -46,6 +57,8 @@ export default function TeacherHubPage() {
 
   // LINE Simulator state
   const [lineModalData, setLineModalData] = useState<any | null>(null);
+
+  const teacherId = "teacher_somsri";
 
   const fetchTeacherData = async () => {
     try {
@@ -77,6 +90,13 @@ export default function TeacherHubPage() {
       if (dataUsers.success) {
         const roomStudents = dataUsers.data.filter((u: any) => u.role === "STUDENT");
         setStudents(roomStudents);
+      }
+
+      // 5. Fetch Homework Radar Data
+      const resHw = await fetch(`/api/v1/homework?targetRoom=ม.4/1&teacherId=${teacherId}`);
+      const dataHw = await resHw.json();
+      if (dataHw.success) {
+        setHomeworkData(dataHw.data);
       }
     } catch (err: any) {
       setError(err.message || "Failed to load teacher dashboard data");
@@ -127,7 +147,6 @@ export default function TeacherHubPage() {
       if (data.success) {
         fetchTeacherData();
 
-        // Trigger simulated LINE notification to parent if Absent or Late
         if (status === "ABSENT" || status === "LATE") {
           const student = students.find((s) => s.id === studentId);
           setLineModalData({
@@ -141,6 +160,51 @@ export default function TeacherHubPage() {
           });
         }
       }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // Handle Log Homework (Flexible: doesn't block if fields are empty)
+  const handleLogHomework = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!activeSession?.courseId) return;
+
+    try {
+      setIsLoggingHw(true);
+      const res = await fetch("/api/v1/homework", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          courseId: activeSession.courseId,
+          targetRoom: "ม.4/1",
+          title: hwTitle || "มีการบ้านประจำคาบเรียน",
+          dueLabel: hwDueLabel,
+          estimatedMin: hwEstimatedMin ? Number(hwEstimatedMin) : undefined,
+          teacherId,
+        }),
+      });
+      const resData = await res.json();
+      if (resData.success) {
+        setHwSuccessMsg(resData.message);
+        setHwTitle("");
+        setHwEstimatedMin("");
+        fetchTeacherData();
+        setTimeout(() => setHwSuccessMsg(null), 3500);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoggingHw(false);
+    }
+  };
+
+  // Handle Delete Homework
+  const handleDeleteHomework = async (id: string) => {
+    try {
+      const res = await fetch(`/api/v1/homework?id=${id}`, { method: "DELETE" });
+      const data = await res.json();
+      if (data.success) fetchTeacherData();
     } catch (err) {
       console.error(err);
     }
@@ -205,7 +269,6 @@ export default function TeacherHubPage() {
         setAnnouncementTitle("");
         setAnnouncementContent("");
         
-        // Show simulated LINE notification preview
         setLineModalData({
           title: "📢 " + data.data.title,
           studentName: "นักเรียนและผู้ปกครอง ม.4/1",
@@ -239,12 +302,16 @@ export default function TeacherHubPage() {
     );
   }
 
-  // Calculate current attendance metrics for active session
   const currentAttendances = activeSession?.attendances || [];
   const presentCount = currentAttendances.filter((a: any) => a.status === "PRESENT").length;
   const lateCount = currentAttendances.filter((a: any) => a.status === "LATE").length;
   const totalChecked = presentCount + lateCount;
   const totalStudents = students.length || 1;
+
+  const todayHomeworks = homeworkData?.todayAssignments || [];
+  const hwCount = homeworkData?.homeworkCount || 0;
+  const loadLevel = homeworkData?.loadLevel || "LIGHT";
+  const myHistory = homeworkData?.myHistory || [];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-in fade-in duration-200">
@@ -287,6 +354,150 @@ export default function TeacherHubPage() {
               <Play className="w-4 h-4" />
               <span>เปิดรอบเช็คชื่อ (เริ่มคาบ)</span>
             </button>
+          )}
+        </div>
+      </div>
+
+      {/* 🌟 NEW: Daily Homework Radar & Load Meter Card */}
+      <div className="glass-card rounded-3xl p-6 shadow-sm border border-zinc-200 dark:border-zinc-800 space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="flex items-center space-x-3">
+            <div
+              className={`w-10 h-10 rounded-2xl flex items-center justify-center ${
+                loadLevel === "OVERLOAD"
+                  ? "bg-rose-500/10 text-rose-600"
+                  : loadLevel === "MODERATE"
+                  ? "bg-amber-500/10 text-amber-600"
+                  : "bg-emerald-500/10 text-emerald-600"
+              }`}
+            >
+              <BookOpen className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center space-x-2">
+                <h3 className="font-bold text-base text-zinc-900 dark:text-zinc-100">
+                  เรดาร์ตรวจวัดภาระการบ้านวันนี้ (Daily Homework Radar)
+                </h3>
+                <span
+                  className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full border ${
+                    loadLevel === "OVERLOAD"
+                      ? "bg-rose-50 text-rose-700 border-rose-200 animate-pulse"
+                      : loadLevel === "MODERATE"
+                      ? "bg-amber-50 text-amber-700 border-amber-200"
+                      : "bg-emerald-50 text-emerald-700 border-emerald-200"
+                  }`}
+                >
+                  {loadLevel === "OVERLOAD"
+                    ? "⚠️ การบ้านหนาแน่น (Overload)"
+                    : loadLevel === "MODERATE"
+                    ? "🟡 ภาระปานกลาง (2 วิชา)"
+                    : "🟢 ปกติ (0-1 วิชา)"}
+                </span>
+              </div>
+              <p className="text-xs text-zinc-500 mt-0.5">
+                {homeworkData?.loadMessage}
+              </p>
+            </div>
+          </div>
+
+          <div className="text-right">
+            <span className="text-[11px] font-medium text-zinc-400">การบ้านที่สั่งแล้ววันนี้</span>
+            <p className="text-xl font-black text-indigo-600 dark:text-indigo-400">
+              {hwCount} วิชาในห้อง ม.4/1
+            </p>
+          </div>
+        </div>
+
+        {/* Cross-subject Homework Timeline Feed */}
+        {todayHomeworks.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-2">
+            {todayHomeworks.map((hw: any) => (
+              <div
+                key={hw.id}
+                className="p-3.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 text-xs space-y-1.5 relative group"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-zinc-900 dark:text-zinc-100">
+                    {hw.course?.name}
+                  </span>
+                  <span className="text-[10px] font-mono text-zinc-400">
+                    {hw.teacher?.name.split(" ")[0]}
+                  </span>
+                </div>
+                <p className="text-zinc-700 dark:text-zinc-300 font-medium">📝 {hw.title}</p>
+                <div className="flex items-center justify-between text-[11px] text-zinc-500 pt-1 border-t border-zinc-200/40">
+                  <span>⏰ {hw.dueLabel || "ส่งคาบหน้า"}</span>
+                  {hw.estimatedMin && (
+                    <span className="text-indigo-600 font-semibold">~{hw.estimatedMin} นาที</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="bg-zinc-50 dark:bg-zinc-900/50 p-3 rounded-2xl text-center text-xs text-zinc-400">
+            ยังไม่มีอาจารย์ท่านใดสั่งการบ้านในห้อง ม.4/1 วันนี้
+          </div>
+        )}
+
+        {/* Quick Homework Logger Form (Flexible, non-blocking) */}
+        <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800">
+          <form onSubmit={handleLogHomework} className="flex flex-wrap items-center gap-2 text-xs">
+            <span className="font-bold text-zinc-800 dark:text-zinc-200 flex items-center space-x-1 mr-1">
+              <PlusCircle className="w-4 h-4 text-indigo-600" />
+              <span>สั่งการบ้านวิชานี้:</span>
+            </span>
+
+            {/* Optional Title input */}
+            <input
+              type="text"
+              value={hwTitle}
+              onChange={(e) => setHwTitle(e.target.value)}
+              placeholder="ระบุชื่องาน (เช่น แบบฝึกหัดหน้า 45) หรือเว้นว่างได้"
+              className="flex-1 min-w-[200px] p-2 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+
+            {/* Quick Due shortcuts */}
+            <div className="flex items-center space-x-1">
+              {["ส่งคาบหน้า", "ส่งพรุ่งนี้", "ส่งสัปดาห์หน้า"].map((label) => (
+                <button
+                  key={label}
+                  type="button"
+                  onClick={() => setHwDueLabel(label)}
+                  className={`px-2.5 py-1.5 rounded-lg text-[11px] font-semibold transition ${
+                    hwDueLabel === label
+                      ? "bg-indigo-600 text-white"
+                      : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 hover:bg-zinc-200"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            {/* Optional time estimate */}
+            <input
+              type="number"
+              value={hwEstimatedMin}
+              onChange={(e) => setHwEstimatedMin(e.target.value)}
+              placeholder="นาที (ถ้ามี)"
+              className="w-20 p-2 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-center"
+            />
+
+            <button
+              type="submit"
+              disabled={isLoggingHw}
+              className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2 rounded-xl transition shadow-sm active:scale-95 flex items-center space-x-1"
+            >
+              <span>{isLoggingHw ? "กำลังบันทึก..." : "บันทึกการบ้าน"}</span>
+            </button>
+          </form>
+
+          {hwSuccessMsg && (
+            <p className="text-xs text-emerald-600 font-bold mt-2 animate-in fade-in flex items-center space-x-1">
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>{hwSuccessMsg}</span>
+            </p>
           )}
         </div>
       </div>

@@ -8,8 +8,10 @@ export async function GET(req: Request) {
     const studentId = searchParams.get("studentId");
     const parentId = searchParams.get("parentId");
 
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     if (mode === "student" && studentId) {
-      // 1. Calculate 80% Rule & Course Attendance stats for student
       const student = await prisma.user.findUnique({
         where: { id: studentId },
         include: {
@@ -51,7 +53,6 @@ export async function GET(req: Request) {
         },
       });
 
-      // Calculate stats per course (Assuming total 20 periods per semester)
       const totalSemesterPeriods = 20;
       const courseStats = courses.map((course) => {
         let presentCount = 0;
@@ -69,12 +70,10 @@ export async function GET(req: Request) {
           }
         });
 
-        // 3 Late = 1 Absent rule or standard percentage
         const effectiveAttended = presentCount + (lateCount * 0.75) + leaveCount;
         const totalPast = course.sessions.length || 1;
         const currentPercentage = Math.round((effectiveAttended / totalPast) * 100);
         
-        // Allowed max absence = 20% of 20 = 4 times
         const maxAllowedAbsence = Math.floor(totalSemesterPeriods * 0.2);
         const remainingAbsenceQuota = Math.max(0, maxAllowedAbsence - absentCount);
         const isAtRisk = remainingAbsenceQuota <= 1 || currentPercentage < 80;
@@ -96,9 +95,21 @@ export async function GET(req: Request) {
         };
       });
 
-      // Fetch Today's Prep Checklist
+      // Fetch Today's Prep Checklist & Active Homework Assignments
       const prepItems = await prisma.classPrep.findMany({
         where: student.studentRoom ? { targetRoom: student.studentRoom } : {},
+      });
+
+      const homeworks = await prisma.homeworkAssignment.findMany({
+        where: {
+          targetRoom: student.studentRoom || "ม.4/1",
+          createdAt: { gte: today },
+        },
+        include: {
+          course: true,
+          teacher: true,
+        },
+        orderBy: { createdAt: "desc" },
       });
 
       return NextResponse.json({
@@ -107,12 +118,12 @@ export async function GET(req: Request) {
           student,
           courseStats,
           prepItems,
+          homeworks,
         },
       });
     }
 
     if (mode === "parent-feed" && parentId) {
-      // Find parent's children
       const links = await prisma.parentStudentLink.findMany({
         where: { parentId },
         include: {
@@ -140,22 +151,32 @@ export async function GET(req: Request) {
         },
       });
 
+      // Also get homework for parent's child room
+      const homeworks = await prisma.homeworkAssignment.findMany({
+        where: {
+          targetRoom: "ม.4/1",
+          createdAt: { gte: today },
+        },
+        include: { course: true, teacher: true },
+        orderBy: { createdAt: "desc" },
+      });
+
       return NextResponse.json({
         success: true,
         data: {
           children: links.map((l) => l.student),
+          homeworks,
         },
       });
     }
 
-    // Default: School-wide Overview Stats for Admin Dashboard
+    // Overview Stats
     const totalStudents = await prisma.user.count({ where: { role: "STUDENT" } });
     const totalTeachers = await prisma.user.count({ where: { role: "TEACHER" } });
     const totalCourses = await prisma.course.count();
     const activeSessions = await prisma.classSession.count({ where: { status: "ACTIVE" } });
     const pendingLeaves = await prisma.leaveRequest.count({ where: { teacherStatus: "PENDING" } });
 
-    // Recent attendances across the school
     const recentAttendances = await prisma.attendanceRecord.findMany({
       include: {
         student: true,
@@ -189,7 +210,7 @@ export async function GET(req: Request) {
           totalCourses,
           activeSessions,
           pendingLeaves,
-          overallAttendanceRate: 94, // Percentage
+          overallAttendanceRate: 94,
         },
         recentAttendances,
         studentList,

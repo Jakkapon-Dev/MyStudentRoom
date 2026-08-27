@@ -7,46 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum Role {
-  ADMIN
-  TEACHER
-  STUDENT
-  PARENT
-}
-
-enum SessionStatus {
-  SCHEDULED
-  ACTIVE
-  CLOSED
-}
-
-enum AttendanceStatus {
-  PRESENT
-  LATE
-  LEAVE
-  ABSENT
-}
-
-enum CheckinMethod {
-  QR
-  GPS
-  MANUAL
-  PIN
-  GATE
-}
-
-enum LeaveType {
-  SICK
-  BUSINESS
-  ACTIVITY
-}
-
-enum ReviewStatus {
-  PENDING
-  APPROVED
-  REJECTED
-}
-
 model User {
   id             String         @id @default(cuid())
   code           String?        @unique
@@ -70,6 +30,7 @@ model User {
   moodLogs       MoodLog[]
   safeMessages   SafeMessage[]  @relation("StudentSafeMessages")
   advisorMessages SafeMessage[] @relation("AdvisorSafeMessages")
+  homeworkGiven  HomeworkAssignment[]
   parentOf       ParentStudentLink[] @relation("ParentLink")
   childOf        ParentStudentLink[] @relation("StudentLink")
 }
@@ -86,6 +47,7 @@ model Course {
   teacherId   String
   teacher     User           @relation("TeacherCourses", fields: [teacherId], references: [id])
   sessions    ClassSession[]
+  homeworks   HomeworkAssignment[]
   createdAt   DateTime       @default(now())
 }
 
@@ -103,6 +65,21 @@ model ClassSession {
   course         Course             @relation(fields: [courseId], references: [id])
   attendances    AttendanceRecord[]
   createdAt      DateTime           @default(now())
+}
+
+model HomeworkAssignment {
+  id           String    @id @default(cuid())
+  courseId     String
+  targetRoom   String    @default("ม.4/1")
+  title        String    // e.g. "แบบฝึกหัดบทที่ 2 หน้า 45" or "มีการบ้าน"
+  description  String?
+  dueDate      DateTime?
+  dueLabel     String?   // e.g. "ส่งคาบหน้า", "ส่งพรุ่งนี้", "ส่งวันจันทร์"
+  estimatedMin Int?      // e.g. 20 (นาที)
+  teacherId    String
+  createdAt    DateTime  @default(now())
+  course       Course    @relation(fields: [courseId], references: [id])
+  teacher      User      @relation(fields: [teacherId], references: [id])
 }
 
 model AttendanceRecord {

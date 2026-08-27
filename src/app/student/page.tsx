@@ -19,6 +19,8 @@ import {
   Camera,
   Check,
   Zap,
+  CheckSquare,
+  Square,
 } from "lucide-react";
 import { SkeletonCard, ErrorState } from "@/components/UIStates";
 import { LineSimulatorModal } from "@/components/LineSimulatorModal";
@@ -33,7 +35,6 @@ export default function StudentPortalPage() {
   const [qrInputToken, setQrInputToken] = useState("");
   const [pinInput, setPinInput] = useState("");
   const [checkinMethod, setCheckinMethod] = useState<"QR" | "PIN">("QR");
-  const [isScanning, setIsScanning] = useState(false);
   const [checkinSuccessMsg, setCheckinSuccessMsg] = useState<string | null>(null);
   const [checkinErrorMsg, setCheckinErrorMsg] = useState<string | null>(null);
 
@@ -52,6 +53,9 @@ export default function StudentPortalPage() {
   const [leaveStartDate, setLeaveStartDate] = useState("");
   const [leaveReason, setLeaveReason] = useState("");
   const [leaveSuccessMsg, setLeaveSuccessMsg] = useState<string | null>(null);
+
+  // Homework Completed State
+  const [completedHw, setCompletedHw] = useState<Record<string, boolean>>({});
 
   // LINE Simulator
   const [lineModalData, setLineModalData] = useState<any | null>(null);
@@ -88,6 +92,14 @@ export default function StudentPortalPage() {
     fetchStudentData();
   }, []);
 
+  // Toggle Homework Complete
+  const toggleHomework = (hwId: string) => {
+    setCompletedHw((prev) => ({
+      ...prev,
+      [hwId]: !prev[hwId],
+    }));
+  };
+
   // Handle QR Check-in
   const handleCheckin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -96,7 +108,6 @@ export default function StudentPortalPage() {
     setCheckinSuccessMsg(null);
     setCheckinErrorMsg(null);
 
-    // Simulate GPS coordinates (in classroom)
     const mockStudentLat = 13.75631;
     const mockStudentLng = 100.50182;
 
@@ -121,14 +132,12 @@ export default function StudentPortalPage() {
         setQrInputToken("");
         setPinInput("");
 
-        // Trigger victory confetti
         confetti({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
         });
 
-        // Trigger Simulated LINE Flex card notification to parent
         setLineModalData({
           title: "เข้าเรียนเรียบร้อยแล้ว",
           studentName: data?.student?.name || "นาย ชัยวัฒน์ ภักดี",
@@ -243,7 +252,7 @@ export default function StudentPortalPage() {
 
   const student = data?.student;
   const courseStats = data?.courseStats || [];
-  const prepItems = data?.prepItems || [];
+  const homeworks = data?.homeworks || [];
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 space-y-6 animate-in fade-in duration-200">
@@ -282,6 +291,74 @@ export default function StudentPortalPage() {
             <p className="text-xl font-extrabold text-white">{student?.points || 240} pts</p>
           </div>
         </div>
+      </div>
+
+      {/* 🌟 NEW: Today's Homework Checklist from Teachers */}
+      <div className="glass-card rounded-3xl p-6 shadow-sm border border-zinc-200 dark:border-zinc-800 space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <BookOpen className="w-5 h-5 text-indigo-600" />
+            <h3 className="font-bold text-base text-zinc-900 dark:text-zinc-100">
+              การบ้านประจำวัน (Homework Tasks)
+            </h3>
+          </div>
+          <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950 px-2.5 py-1 rounded-full border border-indigo-200">
+            {homeworks.length} รายการวันนี้
+          </span>
+        </div>
+
+        {homeworks.length > 0 ? (
+          <div className="space-y-2.5">
+            {homeworks.map((hw: any) => {
+              const isDone = !!completedHw[hw.id];
+              return (
+                <div
+                  key={hw.id}
+                  onClick={() => toggleHomework(hw.id)}
+                  className={`p-3.5 rounded-2xl border cursor-pointer transition flex items-start space-x-3 ${
+                    isDone
+                      ? "bg-emerald-50/60 border-emerald-200 dark:bg-emerald-950/20 opacity-75"
+                      : "bg-zinc-50/60 dark:bg-zinc-900/60 border-zinc-200 dark:border-zinc-800 hover:border-indigo-300"
+                  }`}
+                >
+                  <div className="mt-0.5">
+                    {isDone ? (
+                      <CheckSquare className="w-5 h-5 text-emerald-600" />
+                    ) : (
+                      <Square className="w-5 h-5 text-zinc-400" />
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between">
+                      <h4
+                        className={`text-xs font-bold ${
+                          isDone
+                            ? "line-through text-zinc-400"
+                            : "text-zinc-900 dark:text-zinc-100"
+                        }`}
+                      >
+                        {hw.course?.name}: {hw.title}
+                      </h4>
+                      <span className="text-[10px] font-medium text-zinc-400">
+                        {hw.dueLabel || "ส่งคาบถัดไป"}
+                      </span>
+                    </div>
+                    {hw.description && (
+                      <p className="text-[11px] text-zinc-500 mt-0.5">{hw.description}</p>
+                    )}
+                    <p className="text-[10px] text-indigo-600 dark:text-indigo-400 mt-1">
+                      อาจารย์ผู้สั่ง: {hw.teacher?.name}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="bg-zinc-50 dark:bg-zinc-900/50 p-4 rounded-2xl text-center text-xs text-zinc-400">
+            🎉 วันนี้ยังไม่มีการบ้าน สามารถพักผ่อนหรือทบทวนบทเรียนได้เลย!
+          </div>
+        )}
       </div>
 
       {/* Check-in Card (Scanner & PIN) */}

@@ -5,6 +5,7 @@ async function main() {
   console.log('🌱 Clearing existing database...');
   await prisma.attendanceRecord.deleteMany();
   await prisma.classSession.deleteMany();
+  await prisma.homeworkAssignment.deleteMany();
   await prisma.course.deleteMany();
   await prisma.gateRecord.deleteMany();
   await prisma.leaveRequest.deleteMany();
@@ -167,7 +168,6 @@ async function main() {
 
   console.log('📚 Creating Courses and Sessions...');
 
-  // Bangkok Classroom Default Coordinates (e.g. Siam / Demo coords)
   const mathCourse = await prisma.course.create({
     data: {
       id: 'course_math101',
@@ -227,6 +227,26 @@ async function main() {
     },
   });
 
+  console.log('📝 Creating Homework Assignments for Homework Radar...');
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+  await prisma.homeworkAssignment.createMany({
+    data: [
+      {
+        courseId: sciCourse.id,
+        targetRoom: 'ม.4/1',
+        title: 'สรุปผลการทดลองเคมีเรื่องพันธะเคมี 1 หน้า',
+        description: 'ทำลงในสมุดแบบฝึกหัดวิทยาศาสตร์',
+        dueDate: tomorrow,
+        dueLabel: 'ส่งพรุ่งนี้ก่อน 08:30 น.',
+        estimatedMin: 25,
+        teacherId: teacherPrasert.id,
+        createdAt: new Date(Date.now() - 30 * 60000), // 30 mins ago
+      },
+    ],
+  });
+
   console.log('🚪 Creating Gate Records (Morning Arrival)...');
   const morningTime = new Date();
   morningTime.setHours(7, 42, 0, 0);
@@ -278,9 +298,6 @@ async function main() {
   });
 
   console.log('💌 Creating Leave Request & SafeMessages...');
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
-
   await prisma.leaveRequest.create({
     data: {
       id: 'leave_nalinrat_1',
@@ -347,40 +364,10 @@ async function main() {
         senderName: 'อ.สมศรี รักษ์เรียน (ครูประจำชั้น ม.4/1)',
         readCount: 28,
       },
-      {
-        title: '🗓️ กำหนดการประชุมผู้ปกครองภาคเรียนที่ 1/2569',
-        content: 'ขอเชิญผู้ปกครองทุกท่านเข้าร่วมประชุมผู้ปกครองในวันเสาร์ที่ 5 กันยายน 2569 เวลา 09:00 - 12:00 น. ณ หอประชุมใหญ่',
-        priority: 'NORMAL',
-        targetRoom: 'ALL',
-        senderName: 'ฝ่ายวิชาการ โรงเรียน',
-        readCount: 142,
-      },
     ],
   });
 
-  // Class Prep
-  await prisma.classPrep.createMany({
-    data: [
-      {
-        targetRoom: 'ม.4/1',
-        dayOfWeek: 4, // Thursday
-        uniformType: 'ชุดนักเรียน',
-        subjectName: 'ศิลปะ & วิทยาศาสตร์',
-        requiredItems: 'พู่กันเบอร์ 4 และ 8, สีน้ำ 12 สี, สมุดวาดเขียน 100 ปอนด์',
-        homeworkTask: 'ส่งภาพสเก็ตช์ทิวทัศน์ 1 แผ่น และรายงานการทดลองเคมีบทที่ 2',
-      },
-      {
-        targetRoom: 'ม.4/1',
-        dayOfWeek: 5, // Friday
-        uniformType: 'ชุดพละ',
-        subjectName: 'สุขศึกษาและพลศึกษา',
-        requiredItems: 'ขวดน้ำดื่มส่วนตัว, ผ้าเช็ดหน้า',
-        homeworkTask: 'แบบฝึกหัดโภชนาการหน้า 45-48',
-      },
-    ],
-  });
-
-  console.log('✅ Database seeded successfully with realistic MyStudentRoom sample data!');
+  console.log('✅ Database re-seeded successfully with Homework Radar data!');
 }
 
 main()

@@ -15,6 +15,7 @@ import {
   ChevronRight,
   ShieldCheck,
   Send,
+  BookOpen,
 } from "lucide-react";
 import { SkeletonCard, EmptyState, ErrorState } from "@/components/UIStates";
 import { LineSimulatorModal } from "@/components/LineSimulatorModal";
@@ -35,19 +36,17 @@ export default function ParentPortalPage() {
   // LINE Simulator
   const [lineModalData, setLineModalData] = useState<any | null>(null);
 
-  const parentId = "parent_somjai"; // Default parent Somjai
+  const parentId = "parent_somjai";
 
   const fetchParentData = async () => {
     try {
       setLoading(true);
       setError(null);
 
-      // 1. Fetch Parent Feed
       const resFeed = await fetch(`/api/v1/stats?mode=parent-feed&parentId=${parentId}`);
       const dataFeed = await resFeed.json();
       if (dataFeed.success) setData(dataFeed.data);
 
-      // 2. Fetch Announcements
       const resAnn = await fetch("/api/v1/announcements?targetRoom=ม.4/1");
       const dataAnn = await resAnn.json();
       if (dataAnn.success) setAnnouncements(dataAnn.data);
@@ -139,6 +138,7 @@ export default function ParentPortalPage() {
   const gateRecords = activeChild?.gateRecords || [];
   const attendances = activeChild?.attendances || [];
   const leaveRequests = activeChild?.leaveRequests || [];
+  const homeworks = data?.homeworks || [];
 
   return (
     <div className="max-w-md mx-auto px-4 py-6 space-y-6 animate-in fade-in duration-200">
@@ -219,6 +219,41 @@ export default function ParentPortalPage() {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* 🌟 NEW: Today's Homework Overview for Parents */}
+      <div className="glass-card rounded-3xl p-5 shadow-sm border border-zinc-200 dark:border-zinc-800 space-y-3">
+        <div className="flex items-center justify-between">
+          <h3 className="font-bold text-sm text-zinc-900 dark:text-zinc-100 flex items-center space-x-2">
+            <BookOpen className="w-4 h-4 text-indigo-600" />
+            <span>การบ้านของบุตรหลานวันนี้</span>
+          </h3>
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
+            {homeworks.length} วิชา
+          </span>
+        </div>
+
+        {homeworks.length > 0 ? (
+          <div className="space-y-2">
+            {homeworks.map((hw: any) => (
+              <div
+                key={hw.id}
+                className="p-3 rounded-2xl bg-zinc-50/70 dark:bg-zinc-900/70 border border-zinc-100 dark:border-zinc-800 text-xs space-y-1"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-zinc-900 dark:text-zinc-100">{hw.course?.name}</span>
+                  <span className="text-[10px] font-medium text-indigo-600">{hw.dueLabel || "ส่งคาบหน้า"}</span>
+                </div>
+                <p className="text-zinc-600 dark:text-zinc-300 text-[11px]">📝 {hw.title}</p>
+                <p className="text-[10px] text-zinc-400">อาจารย์ผู้สั่ง: {hw.teacher?.name}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-xs text-zinc-400 text-center py-2">
+            วันนี้ยังไม่มีการบ้าน
+          </p>
+        )}
       </div>
 
       {/* Real-Time Live Activity Feed / Timeline */}

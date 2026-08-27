@@ -21,7 +21,7 @@
 ---
 
 ## 🎯 ภาพรวมของระบบ (Overview)
-**MyStudentRoom** คือแพลตฟอร์มบริหารจัดการการเข้าเรียนและดูแลช่วยเหลือนักเรียนแบบครบวงจร (All-in-One School Ecosystem) ที่เชื่อมโยง **4 กลุ่มผู้ใช้งานหลัก** ได้แก่ **อาจารย์ผู้สอน, นักเรียน, ผู้ปกครอง, และฝ่ายวิชาการ** เข้าด้วยกันอย่างสมบูรณ์แบบ แก้ปัญหาการเช็คชื่อแบบเดิมๆ ด้วย **Dynamic QR Code (เปลี่ยนรหัสทุก 8 วิ)** และ **GPS Geofencing** พร้อมไทม์ไลน์ติดตามบุตรหลานแบบ Real-time ผ่าน **LINE LIFF** และกล่องส่งข้อความลับปรึกษาอาจารย์ที่ปรึกษา (**SafeSpace**) เพื่อส่งเสริมสุขภาวะจิตใจที่ดีของนักเรียน
+**MyStudentRoom** คือแพลตฟอร์มบริหารจัดการการเข้าเรียนและดูแลช่วยเหลือนักเรียนแบบครบวงจร (All-in-One School Ecosystem) ที่เชื่อมโยง **4 กลุ่มผู้ใช้งานหลัก** ได้แก่ **อาจารย์ผู้สอน, นักเรียน, ผู้ปกครอง, และฝ่ายวิชาการ** เข้าด้วยกันอย่างสมบูรณ์แบบ แก้ปัญหาการเช็คชื่อแบบเดิมๆ ด้วย **Dynamic QR Code (เปลี่ยนรหัสทุก 8 วิ)** และ **GPS Geofencing** พร้อมไทม์ไลน์ติดตามบุตรหลานแบบ Real-time ผ่าน **LINE LIFF**, กล่องส่งข้อความลับปรึกษาอาจารย์ที่ปรึกษา (**SafeSpace**), และ **ระบบเรดาร์ตรวจวัดภาระการบ้าน (Homework Load Radar)** เพื่อป้องกันไม่ให้นักเรียนทำการบ้านหนักจนเกินไป
 
 ---
 
@@ -30,12 +30,15 @@
 ### 1. 👨‍🏫 ห้องครูผู้สอน & ที่ปรึกษา (`/teacher`)
 * **Dynamic Live QR Display:** ฉายขึ้นจอโปรเจกเตอร์ในห้องเรียน รหัส Token หมุนเปลี่ยนอัตโนมัติทุก 8 วินาที ป้องกันการแคปภาพส่งต่อให้เพื่อนนอกห้อง
 * **Fast Roll-Call Grid:** แตะเปลี่ยนสถานะนักเรียนรายบุคคลได้ทันที `[มา]` `[สาย]` `[ลา]` `[ขาด]` พร้อมนับยอดคนเข้าเรียนสด
+* **Daily Homework Load Radar:** เรดาร์ตรวจวัดความหนาแน่นของการบ้านในห้องวันนี้ (🟢 ปกติ / 🟡 ปานกลาง / 🔴 หนาแน่น) เพื่อช่วยครูตัดสินใจในการสั่งงานไม่ให้ซ้ำซ้อน
+* **Quick Homework Logger:** ฟอร์มบันทึกการบ้านแบบยืดหยุ่น ไม่ล็อกข้อมูล พร้อมปุ่มลัดวันส่ง `[ส่งคาบหน้า]` `[ส่งพรุ่งนี้]` `[ส่งสัปดาห์หน้า]`
 * **Advisor SafeSpace Inbox:** กล่องรับข้อความลับที่นักเรียนส่งหาอาจารย์ที่ปรึกษา พร้อมระบบพิมพ์ข้อความตอบกลับหรือนัดพบส่วนตัว
 * **Leave Approval Queue:** ตรวจสอบคำขอลาของนักเรียน (ดูเหตุผลและรูปใบรับรองแพทย์) และกดอนุมัติ/ปฏิเสธได้ทันที
 * **Instant LINE Broadcaster:** ส่งประกาศด่วนตรงเข้าสู่ LINE ของผู้ปกครองและนักเรียนในห้อง
 
 ### 2. 🎒 พอร์ทัลนักเรียนบนมือถือ (`/student`)
 * **Smart Check-in:** สแกน QR Token หรือกรอกรหัส PIN พร้อมระบบตรวจสอบพิกัด GPS ว่าอยู่ในรัศมีห้องเรียนจริง
+* **Today's Homework Tasks:** แสดงรายการการบ้านทั้งหมดที่สั่งในห้องวันนี้ พร้อมกล่อง Checkbox ติ๊กถูกเมื่อทำเสร็จ
 * **เกจวัดสิทธิ์เข้าสอบ 80% (80% Exam Meter):** คำนวณเปอร์เซ็นต์การเข้าเรียนแยกตามรายวิชา แสดงโควตาการขาดที่เหลือ และเตือนหากเสี่ยงติด มส.
 * **Daily Mood Check-in:** เช็คอินอารมณ์ยามเช้า `[😄 สดชื่น]` `[😐 ปกติ]` `[😫 เหนื่อย]` `[😢 เครียด]`
 * **Confidential SafeSpace Box:** กล่องส่งข้อความลับถึงครูประจำชั้น ขอนัดคุยส่วนตัวแบบเงียบๆ ปลอดภัย 100%
@@ -43,6 +46,7 @@
 
 ### 3. 👨‍👩‍👧 พอร์ทัลผู้ปกครองบน LINE LIFF (`/parent`)
 * **Live Daily Timeline:** ไทม์ไลน์ความเคลื่อนไหวสดของลูก (เวลาเดินทางถึงประตูโรงเรียน + เวลาเข้าเรียนแต่ละคาบ)
+* **Child's Homework Overview:** แสดงรายการการบ้านของลูกในวันนี้และกำหนดส่ง
 * **Parent Leave Confirmation:** กดยืนยันรับทราบการลาของลูก หรือส่งใบลาแทนลูกตรงถึงคุณครู
 * **Urgent School Announcements:** รับข่าวสารและประกาศด่วนจากโรงเรียน
 * **LINE Flex Card Simulator:** หน้าต่างจำลองการส่งการ์ดแจ้งเตือนบน LINE แบบสมจริง
@@ -62,18 +66,21 @@
                  │
                  ├─── [ 👨‍🏫 คุณครู / อาจารย์ ]
                  │    • ยิง Dynamic QR (หมุนทุก 8 วิ) / Fast Roll-Call
+                 │    • เรดาร์วัดภาระการบ้าน (Homework Load Balancer)
                  │    • อนุมัติใบลา & ตรวจใบรับรองแพทย์
                  │    • ดูแล SafeSpace & กล่องความในใจ
                  │    • ส่งประกาศด่วนเข้า LINE
                  │
                  ├─── [ 🎒 นักเรียน ]
                  │    • สแกน QR + ตรวจพิกัด GPS Geofencing
+                 │    • Checklist การบ้านวันนี้ (Interactive Task)
                  │    • เกจวัดสิทธิ์สอบ (กฎ 80%) & Streak
                  │    • เช็คอิน Daily Mood & ส่งข้อความลับหาครูที่ปรึกษา
                  │    • ยื่นคำขอลาหยุด
                  │
                  └─── [ 👨‍👩‍👧 ผู้ปกครอง (ผ่าน LINE OA / LIFF) ]
                       • ไทม์ไลน์ติดตามลูก Real-time (ถึง รร. / เข้าแต่ละคาบ)
+                      • ดูรายการการบ้านและกำหนดส่งของลูก
                       • ยืนยันการลา / ส่งใบลาแทนลูก
                       • รับประกาศด่วน & การ์ดสรุปเข้าเรียนประจำสัปดาห์
 ```
@@ -125,49 +132,10 @@ npm run dev
 
 | บทบาท | ชื่อผู้ใช้ | รายละเอียดการทดสอบ |
 |---|---|---|
-| 👨‍🏫 **Teacher** | อ.สมศรี รักษ์เรียน | อาจารย์ประจำชั้น ม.4/1, ครูวิชาคณิตศาสตร์, คุม Dynamic QR, อนุมัติใบลา |
-| 🎒 **Student** | นาย ชัยวัฒน์ ภักดี | นักเรียน ม.4/1 (STU40101), สแกน QR, เช็คสิทธิ์สอบ 80%, Streak 🔥 18 วัน |
-| 👨‍👩‍👧 **Parent** | คุณแม่ สมใจ ภักดี | ผู้ปกครองของ นาย ชัยวัฒน์, ดู Live Timeline, ยืนยันใบลา |
+| 👨‍🏫 **Teacher** | อ.สมศรี รักษ์เรียน | อาจารย์ประจำชั้น ม.4/1, ครูวิชาคณิตศาสตร์, คุม Dynamic QR, เรดาร์การบ้าน, อนุมัติใบลา |
+| 🎒 **Student** | นาย ชัยวัฒน์ ภักดี | นักเรียน ม.4/1 (STU40101), สแกน QR, Checklist การบ้าน, เช็คสิทธิ์สอบ 80%, Streak 🔥 18 วัน |
+| 👨‍👩‍👧 **Parent** | คุณแม่ สมใจ ภักดี | ผู้ปกครองของ นาย ชัยวัฒน์, ดู Live Timeline, ดูการบ้านลูก, ยืนยันใบลา |
 | 🏫 **Admin** | อาจารย์ วิชัย มั่นคง | ฝ่ายวิชาการและทะเบียน, ดู Overview Metrics, Export รายงาน Excel/CSV |
-
----
-
-## 📁 โครงสร้างโฟลเดอร์ (Project Structure)
-
-```text
-MyStudentRoom/
-├── prisma/
-│   ├── schema.prisma           # Prisma Database Schema (Models & Relations)
-│   └── seed.js                 # Seed script สร้างข้อมูลจำลองที่สมจริง
-├── src/
-│   ├── app/
-│   │   ├── (portals)/
-│   │   │   ├── teacher/page.tsx # ห้องครู (Dynamic QR, Roll-call, SafeSpace)
-│   │   │   ├── student/page.tsx # พอร์ทัลนักเรียน (Scanner, 80% Meter, SafeSpace)
-│   │   │   ├── parent/page.tsx  # พอร์ทัลผู้ปกครอง (LINE LIFF, Live Timeline)
-│   │   │   └── admin/page.tsx   # ฝ่ายวิชาการ (Heatmap, Export Excel/CSV)
-│   │   ├── api/v1/             # 4-Step API Pipelines (Zod Validated)
-│   │   │   ├── attendance/     # QR & GPS check-in, Fast Roll-call
-│   │   │   ├── sessions/       # Session lifecycle & Dynamic QR rotation
-│   │   │   ├── leaves/         # 3-Way leave request workflow
-│   │   │   ├── safespace/      # Daily mood & confidential messages
-│   │   │   ├── announcements/  # Priority broadcast notifications
-│   │   │   ├── stats/          # 80% Rule analytics & parent feeds
-│   │   │   └── users/          # Demo role switcher users
-│   │   ├── layout.tsx          # Main Root Layout with RoleSwitcher Bar
-│   │   └── page.tsx            # Hub Landing Page with Portal Showcases
-│   ├── components/
-│   │   ├── RoleSwitcher.tsx    # Universal Demo Switcher Top Bar
-│   │   ├── QRDisplay.tsx       # Live rotating QR canvas with countdown
-│   │   ├── LineSimulatorModal.tsx # Interactive LINE Flex Card modal
-│   │   └── UIStates.tsx        # 4-State UI (Skeleton, Empty, Error)
-│   └── lib/
-│       ├── prisma.ts           # Prisma Client Singleton
-│       ├── geo.ts              # Haversine Geofencing Validator
-│       ├── qr-crypto.ts        # Rotating HMAC Token generator
-│       └── types.ts            # Zod Contracts & DTOs
-└── README.md
-```
 
 ---
 
